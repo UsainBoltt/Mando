@@ -1,32 +1,34 @@
-/* ===== MANDO PS4 ESTILO STREAMER ===== */
+/* ===== MANDO PS4 ESTILO STREAMER (FIXED) ===== */
 
-/* Color base del mando */
 .controller {
-  filter: hue-rotate(210deg) saturate(1.8) brightness(1.1);
   opacity: 0.95;
 }
 
-/* Glow general (efecto neón) */
+/* Glow general sin romper el render */
 .controller {
-  filter: drop-shadow(0 0 12px rgba(0, 200, 255, 0.8));
+  filter: drop-shadow(0 0 12px rgba(0, 200, 255, 0.8)) 
+          hue-rotate(210deg) 
+          saturate(1.8) 
+          brightness(1.1);
 }
 
-/* Sticks más visibles */
+/* Sticks */
 .stick {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
 }
 
-/* Botones con más contraste */
+/* Botones */
 .button {
   opacity: 0.95;
 }
 
-/* Gatillos un poco más definidos */
-.trigger, .bumper {
+/* Gatillos y bumpers */
+.trigger,
+.bumper {
   filter: brightness(1.1);
 }
 
-/* D-pad más visible */
+/* D-pad */
 .dpad {
   filter: saturate(1.4);
 }
